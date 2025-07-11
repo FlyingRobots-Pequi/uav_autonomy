@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  uav_autonomy_dev:
+    build: 
+      context: .
+      dockerfile: ./docker/Dockerfile
+    image: uav_autonomy:latest
+    container_name: uav_autonomy_dev
+    volumes:
+      - ./ros_packages:/ros2_ws/src:rw
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      - /dev:/dev:rw
+    environment:
+      - DISPLAY=${DISPLAY}
+      - ROS_DOMAIN_ID=42
+    network_mode: host
+    privileged: true
+    stdin_open: true
+    tty: true
+    runtime: nvidia
+    command: /entrypoint.sh 

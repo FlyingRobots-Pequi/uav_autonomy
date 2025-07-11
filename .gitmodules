@@ -1,0 +1,12 @@
+[submodule "ros_packages/uav_interfaces"]
+	path = ros_packages/uav_interfaces
+	url = https://github.com/FlyingRobots-Pequi/uav_interfaces.git
+	branch = main
+[submodule "ros_packages/uav_offboard"]
+	path = ros_packages/uav_offboard
+	url = https://github.com/FlyingRobots-Pequi/uav_offboard.git
+	branch = robocup
+[submodule "ros_packages/uav_mission"]
+	path = ros_packages/uav_mission
+	url = https://github.com/FlyingRobots-Pequi/uav_mission.git
+	branch = robocup
